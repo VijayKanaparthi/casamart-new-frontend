@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./Login.css"
+import { Link } from "react-router-dom"
 
 class Login extends Component {
   state = { email: "", password: "" }
@@ -42,7 +43,7 @@ class Login extends Component {
 
             <button type="submit">Login</button>
             <p className="login-footer">
-              Don't have an account? <a href="/signup">Sign up</a>
+              Don't have an account? <Link to="/signup">Sign up</Link>
             </p>
             <i>
               <strong>Email: </strong>vijay
