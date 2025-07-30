@@ -8,7 +8,10 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     // Handle login logic here
-    if (this.state.email === "vijay" && this.state.password === "123") {
+    if (
+      this.state.email.trim() === "vijay" &&
+      this.state.password.trim() === "123"
+    ) {
       alert("Login successful!")
       // Redirect to home or dashboard
       this.props.history.push("/home")
