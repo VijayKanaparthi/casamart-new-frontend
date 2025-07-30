@@ -44,6 +44,10 @@ class App extends React.Component {
     window.location.href = "/"
   }
 
+  clearCart = () => {
+    this.setState({ cartList: [] })
+  }
+
   render() {
     const { isSidebarOpen, cartList } = this.state
     return (
@@ -56,6 +60,7 @@ class App extends React.Component {
             logout: this.logout,
             setCartList: this.setCartList,
             removeItem: this.removeItem,
+            clearCart: this.clearCart,
           }}
         >
           <Switch>

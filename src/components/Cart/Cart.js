@@ -10,10 +10,14 @@ class Cart extends Component {
     return (
       <ReactContext.Consumer>
         {(value) => {
-          const { cartList, removeItem } = value
+          const { cartList, removeItem, clearCart } = value
 
           const remove = (item) => {
             removeItem(item)
+          }
+
+          const clear = () => {
+            clearCart()
           }
 
           if (cartList.length > 0) {
@@ -72,7 +76,7 @@ class Cart extends Component {
                   </button>
                   <button
                     style={{ backgroundColor: "#ccc", color: "#000" }}
-                    onClick={() => window.location.reload()}
+                    onClick={clear}
                   >
                     Clear Cart
                   </button>
