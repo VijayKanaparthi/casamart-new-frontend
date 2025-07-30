@@ -10,7 +10,7 @@ class Login extends Component {
     if (this.state.email === "vijay" && this.state.password === "123") {
       alert("Login successful!")
       // Redirect to home or dashboard
-      window.location.href = "/home"
+      this.props.history.push("/home")
     } else {
       alert("Invalid credentials, please try again.")
     }
