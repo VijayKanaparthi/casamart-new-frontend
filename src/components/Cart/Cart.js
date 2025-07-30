@@ -3,6 +3,7 @@ import "./Cart.css"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import ReactContext from "../../Context/ReactContext"
+import { Link } from "react-router-dom"
 
 class Cart extends Component {
   render() {
@@ -50,12 +51,11 @@ class Cart extends Component {
                       </div>
                     </div>
                   ))}
-                  <button
-                    className="cart-add-items-btn"
-                    onClick={() => (window.location.href = "/home")}
-                  >
-                    Add More Items
-                  </button>
+                  <Link to="/home" style={{ textDecoration: "none" }}>
+                    <button className="cart-add-items-btn">
+                      Add More Items
+                    </button>
+                  </Link>
                 </div>
 
                 <div className="cart-summary">
@@ -112,14 +112,9 @@ class Cart extends Component {
                   Your cart is currently empty. Add items from the products
                   page.
                 </p>
-                <button
-                  className="cart-add-items-btn2"
-                  onClick={() => {
-                    window.location.href = "/home"
-                  }}
-                >
-                  Add Items
-                </button>
+                <Link to="/home" style={{ textDecoration: "none" }}>
+                  <button className="cart-add-items-btn2">Add Items</button>
+                </Link>
               </div>
             </div>
           )
