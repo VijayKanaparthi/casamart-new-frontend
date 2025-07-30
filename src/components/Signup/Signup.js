@@ -24,23 +24,15 @@ class Signup extends Component {
               placeholder="Enter your password"
             />
 
-            <button
-              type="submit"
-              onClick={alert(
-                "Please log in using the credentials provided below. This is for demonstration purposes only."
-              )}
-            >
+            <button type="submit" disabled>
               Sign Up
             </button>
             <p className="signup-footer">
               Already have an account? <Link to="/login">Log in</Link>
             </p>
-            <i>
-              <strong>Email: </strong>vijay
-            </i>
-            <i>
-              <strong>Password: </strong>123
-            </i>
+            <p style={{ marginTop: "10px", fontWeight: "bold" }}>
+              This is for demonstration purposes only.
+            </p>
           </form>
         </div>
       </div>
