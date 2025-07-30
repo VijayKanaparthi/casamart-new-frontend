@@ -8,7 +8,12 @@ class Signup extends Component {
       <div className="signup-container">
         <div className="signup-card">
           <h2 className="signup-heading">Join CasaMart</h2>
-          <form className="signup-form">
+          <form
+            className="signup-form"
+            onSubmit={alert(
+              "Please log in using the credentials provided below. This is for demonstration purposes only."
+            )}
+          >
             <label htmlFor="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email" />
 
@@ -19,14 +24,7 @@ class Signup extends Component {
               placeholder="Enter your password"
             />
 
-            <button
-              type="submit"
-              onClick={alert(
-                "Please log in using the credentials provided below. This is for demonstration purposes only."
-              )}
-            >
-              Sign Up
-            </button>
+            <button type="submit">Sign Up</button>
             <p className="signup-footer">
               Already have an account? <Link to="/login">Log in</Link>
             </p>
