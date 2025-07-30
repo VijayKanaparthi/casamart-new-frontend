@@ -28,7 +28,7 @@ class Signup extends Component {
               Sign Up
             </button>
             <p className="signup-footer">
-              Already have an account? <Link href="/login">Log in</Link>
+              Already have an account? <Link to="/login">Log in</Link>
             </p>
             <i>
               <strong>Email: </strong>vijay
